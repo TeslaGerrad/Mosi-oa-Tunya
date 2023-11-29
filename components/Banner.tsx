@@ -8,7 +8,7 @@ function Banner() {
           <span className="underline decoration-4 decoration-[#F7AB0A]">
             Every Tourists
           </span>{" "}
-          favourite Blog in LivingStorn
+          favourite Blog in LivingStone
         </h2>
       </div>
 
