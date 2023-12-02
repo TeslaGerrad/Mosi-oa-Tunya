@@ -4,8 +4,10 @@ import BlogList from "../../components/BlogList";
 import PreviewBlogList from "../../components/PreviewBlogList";
 import { client } from "../../lib/sanity.client";
 import { groq } from "next-sanity";
-
+import { useEffect } from "react";
 import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
+import UploadData from "../components/ip";
+
 
 const query = groq`*[_type=='post'] {
    ...,
@@ -15,6 +17,8 @@ const query = groq`*[_type=='post'] {
 `;
 
 export default async function IndexPage() {
+  await UploadData()
+  // await uploadDataToCollection()
   if (previewData()) {
     return (
       <PreviewSuspense
