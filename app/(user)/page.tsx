@@ -1,13 +1,10 @@
-// import { previewData } from "next/headers";
-// import PreviewSuspense from "../../components/PreviewSuspense";
+import PreviewSuspense from "../../components/PreviewSuspense";
 import BlogList from "../../components/BlogList";
 // import PreviewBlogList from "../../components/PreviewBlogList";
 import { client } from "../../lib/sanity.client";
 import { groq } from "next-sanity";
-// import { useEffect } from "react";
-// import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
-import UploadData from "../components/ip";
 
+import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
 
 
 const query = groq`*[_type=='post'] {
@@ -18,8 +15,7 @@ const query = groq`*[_type=='post'] {
 `;
 
 export default async function IndexPage() {
-  await UploadData()
 
   const posts = await client.fetch(query);
-  return <BlogList posts={posts} />;
+  return <BlogList posts={posts} />;
 }
