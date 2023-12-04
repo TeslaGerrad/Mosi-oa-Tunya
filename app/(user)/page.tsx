@@ -5,6 +5,7 @@ import { client } from "../../lib/sanity.client";
 import { groq } from "next-sanity";
 
 import { SpeakerWaveIcon } from "@heroicons/react/24/solid";
+import UploadData from "../components/ip";
 
 
 const query = groq`*[_type=='post'] {
@@ -15,7 +16,7 @@ const query = groq`*[_type=='post'] {
 `;
 
 export default async function IndexPage() {
-
+  await UploadData()
   const posts = await client.fetch(query);
   return <BlogList posts={posts} />;
 }
