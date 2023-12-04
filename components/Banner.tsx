@@ -34,7 +34,6 @@ function Banner() {
           <h1 className="text-yellow-500 text-lg">Site Visitors: </h1>
           <CountUp
           end={data.length}
-          duration={2.75}
           style={{fontSize:18}}
         />
         </div>

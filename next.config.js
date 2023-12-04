@@ -6,6 +6,6 @@ module.exports = {
   },
   images: {
     
-    domains: ["links.papareact.com", "cdn.sanity.io"],
+    domains: ["links.papareact.com", "cdn.sanity.io",'s1.cdn.autoevolution.com'],
   },
 };
