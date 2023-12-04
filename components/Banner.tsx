@@ -31,7 +31,7 @@ function Banner() {
           favourite Blog in LivingStone
         </h2>
         <div className="flex gap-3 top-5 relative">
-          <h1 className="text-yellow-500 text-lg">Site Visitors: </h1>
+          <h1 className="text-yellow-500 text-lg">Site Tourists: </h1>
           <CountUp
           end={data.length}
           style={{fontSize:18}}
